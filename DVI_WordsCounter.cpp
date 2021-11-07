@@ -111,10 +111,24 @@ void WordsCounter::cancelParssing(void)
 /*Function that print the result on console.*/
 void WordsCounter::printList(void)
 {
-	cout << std::setw(14) << "Occurrence" << "  Word" << endl;
+	/*do sort the result*/
+	vector <pair<string, int>> result;								/*help verctor to sort*/
+	for (auto itr = wordsCnt.begin(); itr != wordsCnt.end(); ++itr)	/*Copy the Map into vector*/
+		result.push_back(*itr);
 
-	for (auto& loc : wordsCnt)
+	sort(															/*Sort the Vector*/
+		result.begin(),												/*Set first element*/
+		result.end(),                                               /*Set last element*/
+		[=](pair<string, int>& p1, pair<string, int>& p2)		    /*Use lambda expression to override the compare function*/
+		{
+			return p1.second < p2.second;                           /*Compare Second Values of Pairs*/
+		}
+	);
+
+	cout << std::setw(20) << "Word" << "  Occurrence" << endl;      /*Visualize the column*/
+
+	for (auto& loc : result)
 	{
-		cout << std::setw(14) << loc.second << "  " << loc.first << endl;
+		cout << std::setw(20) << loc.first << "  " << loc.second << endl;
 	}
 }

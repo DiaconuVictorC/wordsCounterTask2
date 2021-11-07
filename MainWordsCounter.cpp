@@ -22,7 +22,7 @@ void show_help_info(void)
 {
 	cout << "Words counter Utility" << endl << "Version : 1.0" << endl << endl;
 	cout << "This utility parse a text and count the number of occurrences for each word." << endl;
-	cout << "The result will be printed in two columns, first column will contain the occurrences of the corresponding word and second one the special word." << endl;
+	cout << "The result will be printed in two columns, first column will contain the special word and second the occurrences of the corresponding word." << endl;
 
 	cout << "Syntax:" << endl;
 	cout << "../wordsCounterTask.exe (path_to_file) [regular_expresion]" << endl
