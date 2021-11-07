@@ -121,7 +121,7 @@ void WordsCounter::printList(void)
 		result.end(),                                               /*Set last element*/
 		[=](pair<string, int>& p1, pair<string, int>& p2)		    /*Use lambda expression to override the compare function*/
 		{
-			return p1.second < p2.second;                           /*Compare Second Values of Pairs*/
+			return p1.second < p2.second;                           /*Compare Second Values of Pairs */
 		}
 	);
 
