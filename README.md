@@ -6,8 +6,8 @@ A small command line utility.
 The program read a specified text file, identify the individual
 words and count the number of occurrences for each word.
 The result is given in the form of a simple table with two columns.
-The first column contains the number of occurrence, the second column the words found.
-Sorting the results according to the number of occurrences is desired.
+The first column contains the words found, the second column the number of occurrence.
+The result will be sorted according to the number of occurrences.
 
 Syntax:
 C.\Users\yourUserName>"../wordsCounterTask.exe (path_to_file) [regular_expresion]" << endl
